@@ -1,4 +1,5 @@
-/*
+/* A01379896 Erick Bautista Pérez
+ * A01374009 Hector David Hernandez
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -90,6 +91,7 @@ public class VariosMetodos {
         }
         
     }
+    
     public static double calorias(String actividad, int tiempo, double peso){
         
     int mets;
