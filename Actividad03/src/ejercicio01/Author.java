@@ -20,33 +20,22 @@ public class Author {
        this.gender = gender;
     }
     public String getName(){
-        return this.name;
+        return name;
     }
     public String getEmail(){
         return mail;
     }
     public void setEmail(String email){
-        this.name = name;
+        this.mail = email;
     }
     public char getGender(){
-        if (gender == 'm') {
-            return this.gender;
-        }
-        else if (gender == 'f') {
-            return this.gender;
-        }
-        else {
-            System.out.print("Opcion invalida\n");
-        }
-    
-        return 0;
+        return gender;
     }
     
     public String toString(){
-        return "Author[" + this.name + " " + this.mail + " " + this.gender + "]";
+        String st = "Author[name = " + name + ", email = " + mail + ", gender = " + gender + "]";
+        return st;
     }
-    
-    
     
 }
 
