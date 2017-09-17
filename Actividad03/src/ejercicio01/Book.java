@@ -13,22 +13,23 @@ package ejercicio01;
  */
 public class Book {
     private String name;
-    private Author[] names;
-    private Author[] mails;
-    private Author[] authors;
-    private Author[] genders;
+    //private Author[] names;
+    //private Author[] mails;
+    //private Author[] authors;
+    //private Author[] genders;
     private double price;
     private int qty = 0;
+    Author autor;
      
-    public Book(String name, Author[] authors, double price){
+    public Book(String name, Author autor, double price){
         this.name = name;
-        this.authors = authors;
+        this.autor = autor;
         this.price = price;
     }
      
-    public Book(String name, Author[] authors, double price, int qty){
+    public Book(String name, Author autor, double price, int qty){
         this.name = name;
-        this.authors = authors;
+        this.autor = autor;
         this.price = price;
         this.qty = qty;
     }
@@ -37,42 +38,39 @@ public class Book {
         return name;
     }
      
-    public Author[] getAuthor(){
-        return authors;
+    public String getAuthor(){
+        return autor.toString();
     }
      
     public double getPrice(){
         return price;
     }
      
-    public void setPrice(double price){
-        this.price = price;
+    public void setPrice(double newPrice){
+        price = newPrice;
     }
      
     public int getQty(){
         return qty;
     }
      
-    public void setQty(int qty){
-        this.qty = qty;
+    public void setQty(int newQty){
+        qty = newQty;
     }
-     
+    
+    public String getAuthorName(){
+        return autor.getName();
+    }
+    
+    public String getAuthorEmail(){
+        return autor.getEmail();
+    }
+    
+    public char getAuthorGender(){
+        return autor.getGender();
+    }
+    
     public String toString(){
-        String st = "Book[name=" + name + ", Authors [";
-        for(int i=0;i<authors.length;i++){
-            st += authors[i].toString();
-        }
-        st += "}, price = " + price + ", qty=" + qty + "]";
-        return st;
-    }
-     
-    public Author[] getAuthorName(){
-        return names;
-    }
-    public Author[] getAuthorEmail(){
-        return mails;
-    }
-    public Author[] getAuthorGender(){
-        return genders;
+       return "Book[nombre = " + name + getAuthor() +"], price = " + price + ", qty = " + qty + "]";
     }
 }

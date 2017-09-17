@@ -25,8 +25,8 @@ public class Author {
     public String getEmail(){
         return mail;
     }
-    public void setEmail(String email){
-        this.mail = email;
+    public void setEmail(String newEmail){
+        mail = newEmail;
     }
     public char getGender(){
         return gender;
