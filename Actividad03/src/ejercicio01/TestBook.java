@@ -25,7 +25,7 @@ public class TestBook {
         System.out.println("qty is: " + dummyBook.getQty());
         System.out.println("Author is: " + dummyBook.getAuthor());
         System.out.println("Author's name is: " + dummyBook.getAuthorName());
-        System.out.println("Author's email is:" + dummyBook.getAuthorEmail());
+        System.out.println("Author's email is: " + dummyBook.getAuthorEmail());
     }
     
 }

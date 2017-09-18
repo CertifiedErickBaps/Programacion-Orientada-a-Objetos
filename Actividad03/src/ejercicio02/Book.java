@@ -1,11 +1,11 @@
 /*
-
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejercicio01;
+package ejercicio02;
 
+import ejercicio01.Author;
 
 /**
  *
@@ -13,19 +13,19 @@ package ejercicio01;
  */
 public class Book {
     private String name;
+    private Author[] authors; //Regresa arreglos dados en Author[]
     private double price;
     private int qty = 0;
-    private Author autor;
      
-    public Book(String name, Author autor, double price){
+    public Book(String name, Author[] authors, double price){
         this.name = name;
-        this.autor = autor;
+        this.authors = authors;
         this.price = price;
     }
      
-    public Book(String name, Author autor, double price, int qty){
+    public Book(String name, Author[] authors, double price, int qty){
         this.name = name;
-        this.autor = autor;
+        this.authors = authors;
         this.price = price;
         this.qty = qty;
     }
@@ -34,8 +34,8 @@ public class Book {
         return name;
     }
      
-    public String getAuthor(){
-        return autor.toString();
+    public Author[] getAuthors(){
+        return authors;
     }
      
     public double getPrice(){
@@ -53,20 +53,21 @@ public class Book {
     public void setQty(int newQty){
         qty = newQty;
     }
-    
-    public String getAuthorName(){
-        return autor.getName();
-    }
-    
-    public String getAuthorEmail(){
-        return autor.getEmail();
-    }
-    
-    public char getAuthorGender(){
-        return autor.getGender();
-    }
-    
+     
     public String toString(){
-       return "Book[nombre = " + name + getAuthor() +"], price = " + price + ", qty = " + qty + "]";
+        String st = "Book[name="+name+", Authors={";
+        for(int a=0;a<authors.length;a++){
+            st += authors[a].toString();
+        }
+        st += "}, price="+price+", qty="+qty+"]";
+        return st;
+    }
+     
+    public String getAuthorNames(){
+        String nameAuthors = null;
+        for(int i= 0; i<authors.length; i++){
+          nameAuthors += authors[i];  
+        }
+        return nameAuthors;
     }
 }
