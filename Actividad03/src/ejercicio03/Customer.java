@@ -7,7 +7,8 @@ package ejercicio03;
 
 /**
  *
- * @author ERICK
+ * @author Erick Bautista Perez A01379896   
+ * @author Hector David Hernandez Rodrigez A01374009
  */
 public class Customer {
     private int ID;

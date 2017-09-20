@@ -9,7 +9,8 @@ import ejercicio01.Author;
 
 /**
  *
- * @author ERICK
+ * @author Erick Bautista Perez A01379896   
+ * @author Hector David Hernandez Rodrigez A01374009
  */
 public class TestAuthor {
     public static void main(String[] args){

@@ -7,7 +7,8 @@ package ejercicio03;
 
 /**
  *
- * @author ERICK
+ * @author Erick Bautista Perez A01379896   
+ * @author Hector David Hernandez Rodrigez A01374009
  */
 public class TestCustomer {
     public static void main(String[] args){
@@ -17,5 +18,6 @@ public class TestCustomer {
         System.out.println("ID is: " + customer1.getID());
         System.out.println("Name is: " + customer1.getName());
         System.out.println("Discount is: " + customer1.getDiscount());
+        System.out.println(customer1.toString());
     }
 }

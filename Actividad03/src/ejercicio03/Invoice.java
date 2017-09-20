@@ -7,7 +7,8 @@ package ejercicio03;
 
 /**
  *
- * @author ERICK
+ * @author Erick Bautista Perez A01379896   
+ * @author Hector David Hernandez Rodrigez A01374009
  */
 public class Invoice {
     private int ID;
@@ -40,10 +41,10 @@ public class Invoice {
     }
     public double getAmountAfterDiscount(){
         int a = customer.getDiscount();
-        double after = a * amount;
+        double after = (a/100) * amount;
         return after;
     }
-//    public String toString(){
-//       return "Invoice[ID = " + ID + getID() +"]";
-//    }
+    public String toString(){
+       return "Invoice[ID Voice: " + ID + ", {" + getCustomer() + "}" + ", discount: " + customer.getDiscount() + "]";
+    }
 }
