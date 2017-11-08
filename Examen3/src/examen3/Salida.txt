@@ -1,0 +1,20 @@
+Probando figuras
+****************
+Circulo con radio 15.0
+Rectangulo con largo 20.0 y ancho 10.0
+Circulo con radio 5.0
+Rectangulo con largo 10.0 y ancho 5.0
+
+Despues de cambiar tamaño
+****************
+Circulo con radio 15.0
+Rectangulo con largo 20.0 y ancho 10.0
+Circulo con radio 2.5
+Rectangulo con largo 20.0 y ancho 10.0
+
+Intentando duplicar tamaño
+****************
+Circulo con radio 15.0 no puede ser agrandado
+Rectangulo con largo 20.0 y ancho 10.0 no puede ser agrandado
+Circulo con radio 5.0
+Rectangulo con largo 40.0 y ancho 20.0

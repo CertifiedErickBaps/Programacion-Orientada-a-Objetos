@@ -19,7 +19,18 @@ public class Persona {
         this.nacimiento = nacimiento;
     }
     
-    public String toString(){
-        return "Nombre: " + nombre + ", Apellido: " + apellido + ", Nacimiento: " + nacimiento;
+    public String getNombre(){
+        return nombre;
     }
+    public String getApellido(){
+        return apellido;
+    }
+    public Fecha getNacimiento(){
+        return nacimiento;
+    }
+    
+    public String toString(){
+        return "Nombre: " + nombre + ", Apellido: " + apellido + ", Nacimiento: " + nacimiento.toString();
+    }
+    
 }

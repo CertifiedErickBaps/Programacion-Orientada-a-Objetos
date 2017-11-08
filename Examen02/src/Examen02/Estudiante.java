@@ -26,8 +26,12 @@ public class Estudiante extends Persona {
             beca = 0;
         }        
     }
+
     public Estudiante(String nombre, String apellido, Fecha nacimiento, String carrera, int matricula) {
         super(nombre, apellido, nacimiento);
+        this.carrera = carrera;
+        this.matricula = matricula;
+        
         promedio = 0.0;
         beca = 0.0;
     }

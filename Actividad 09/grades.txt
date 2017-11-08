@@ -1,0 +1,5 @@
+Angeles	Programacion	100
+Raul	Fundamentos	80
+Marco	SistemasInteligentes	95
+Jorge	Interaccion	87
+Maria	Graficas	79
