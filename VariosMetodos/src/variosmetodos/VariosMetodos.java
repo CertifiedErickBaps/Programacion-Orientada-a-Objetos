@@ -26,11 +26,11 @@ public class VariosMetodos {
             System.out.println("6. Salir");
             System.out.print("Dame tu opcion: ");
 
-            String menu = sc.next();
+            int menu = sc.nextInt();
 
             switch(menu){    
 
-                case "1":
+                case 1:
                     double total = 0;
                     System.out.println("Peso en kg");
                     double peso = sc.nextDouble();
@@ -46,13 +46,13 @@ public class VariosMetodos {
                     System.out.println("El total de calorias consumidas por minuto son: " + total);
                     break;
 
-                case "2":
+                case 2:
                     System.out.println("Temperatura en Celsius");
                     double celsius = sc.nextDouble();
                     System.out.println("El total en grados Fahrenheit es:" + temperatura(celsius));
                     break;
 
-                case "3":
+                case 3:
                     System.out.println("Dame los parametros");
                     System.out.println("Dame el valor de a");
                     int a = sc.nextInt();
@@ -63,7 +63,7 @@ public class VariosMetodos {
                     System.out.println("El valor total de esta cuadratica es");
                     cuadratica(a,b,c);
                     break;
-                case "4":
+                case 4:
                     System.out.println("Introduce a");
                     int a1 = sc.nextInt();
                     System.out.println("Introduce b");
@@ -71,7 +71,7 @@ public class VariosMetodos {
                     System.out.println("El resultado:");
                     System.out.println(progresion(a1, an));
                     break;
-                case "5":
+                case 5:
                     System.out.println("Introduce sueldo");
                     double sueldo = sc.nextDouble();
                     System.out.println("Introduce prestaciones");
@@ -80,7 +80,7 @@ public class VariosMetodos {
                     double tope = sc.nextDouble();
                     System.out.println(sueldoFinal(sueldo, prestaciones, tope));
                     break;
-                case "6":
+                case 6:
                     exit = true;
                     break;
                 default:
