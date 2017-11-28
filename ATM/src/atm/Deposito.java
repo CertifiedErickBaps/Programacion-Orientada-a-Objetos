@@ -5,6 +5,8 @@
  */
 package atm;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ERICK
@@ -29,9 +31,7 @@ public class Deposito extends Transaccion{
         monto = solicitarDepositoMonto();
         
         if(monto != CANCELED){
-            screen.displayMessage("\nPorfavor inserte un sobre de deposito");
-            screen.displayDollarMonto(monto);
-            screen.displayMessageLine(".");
+            screen.displayMessageLine("\nPorfavor inserte un sobre de deposito " + monto + ".");
             
             boolean sobreRecibido = depositeSlot.sobreRecibido();
          
@@ -47,9 +47,8 @@ public class Deposito extends Transaccion{
     }
     
     private double solicitarDepositoMonto(){
-        Screen screen = getScreen();
-        screen.displayMessage("\nPorfavor deposite un monto en (o 0 para cancelar)");
-        int input = teclado.getInput();
+        int input = Integer.parseInt(JOptionPane.showInputDialog(null, "\nPorfavor deposite un monto en (o 0 para cancelar)"));
+//        int input = teclado.getInput();
         
         if(input == CANCELED){
             return CANCELED;

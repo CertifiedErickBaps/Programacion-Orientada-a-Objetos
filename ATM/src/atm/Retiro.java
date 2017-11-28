@@ -5,6 +5,8 @@
  */
 package atm;
 
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -64,18 +66,10 @@ public class Retiro extends Transaccion{
         @SuppressWarnings("MismatchedReadAndWriteOfArray")
         int[] montos = {0, 20, 40, 60, 100, 200, 500};
         
-        while (usuarioEleccion == 0){
-            screen.displayMessageLine("\nMenu de retiro:");
-            screen.displayMessageLine("\n1 - $20");
-            screen.displayMessageLine("\n2 - $40");
-            screen.displayMessageLine("\n3 - $60");
-            screen.displayMessageLine("\n4 - $100");
-            screen.displayMessageLine("\n5 - $200");
-            screen.displayMessageLine("\n6 - $500");
-            screen.displayMessageLine("\n7 - Transaccion cancelada");
-            screen.displayMessage("\nElije un monto para retirar: ");
+        while (usuarioEleccion == 0){ 
             
-            int input = teclado.getInput();
+            int input = Integer.parseInt(JOptionPane.showInputDialog(null, "\nMenu de retiro:" + "\n1 - $20" + "\n2 - $40" + "\n3 - $60" + "\n4 - $100" + "\n5 - $200" + "\n6 - $500" + "\n7 - Transaccion cancelada" + "\nElije un monto para retirar: "));
+//            int input = teclado.getInput();
             switch(input){
                 case 1:
                 case 2:

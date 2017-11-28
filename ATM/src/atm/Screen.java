@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package atm;
-
+import javax.swing.*;
 /**
  *
  * @author A01374009
@@ -12,13 +12,13 @@ package atm;
 public class Screen {
     //despliega nuestro mensaje sin necesidad de un return
     public void displayMessage(String message){
-        System.out.print(message);
+        message = JOptionPane.showInputDialog(message);
     }
     public void displayMessageLine(String message){
-        System.out.print(message);
+        JOptionPane.showMessageDialog(null, message);
     }
     // nos imprime nuestro monto en signo de dolares
     public void displayDollarMonto(double monto){
-        System.out.printf("$%,.2f", monto);
+        JOptionPane.showMessageDialog(null, monto);
     }
 }

@@ -25,11 +25,9 @@ public class BalanceAdquisicion extends Transaccion{
          double balanceTotal = bankDataBase.getBalanceTotal(getCuentaNumero());
 
          // display the balance information on the screen
-         screen.displayMessageLine("\nInformacion de balance:");
-         screen.displayMessage("\n - Balance disponible: ");
-         screen.displayDollarMonto(balanceDisponible);
-         screen.displayMessage("\n - Balance Total: ");
-         screen.displayDollarMonto(balanceTotal);
-         screen.displayMessageLine("");
+         screen.displayMessageLine("\nInformacion de balance:" + "\n - Balance disponible: " + balanceDisponible);
+//         screen.displayDollarMonto(balanceDisponible);
+         screen.displayMessageLine("\n - Balance Total: " + balanceTotal);
+//         screen.displayDollarMonto(balanceTotal);
     }
 }

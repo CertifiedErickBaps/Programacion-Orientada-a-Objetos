@@ -5,6 +5,8 @@
  */
 package atm;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author A01374009
@@ -40,7 +42,6 @@ public class ATM {
         while (true){
             //ciclo miesntras el usuario no se valida
             while(!validacionUsuario){
-                screen.displayMessageLine("\nBienvenido!");
                 validaUsuario();// valida mi usaurio
             }
             realizaTransacciones();//En este punto mi usuario ya esta validado y puede realizar sus operaciones
@@ -51,10 +52,13 @@ public class ATM {
     }
     //revisa mi usuario en mi base de datos
     private void validaUsuario(){
-        screen.displayMessage("\nIntroduce tu numero de cuenta, por favor:  ");
-        int numeroCuenta = teclado.getInput();// input de mi numero de cuenta
-        screen.displayMessage("\nIngresa tu PIN: ");
-        int pin = teclado.getInput();// input de mi numero de cuenta
+        int numeroCuenta = Integer.parseInt(JOptionPane.showInputDialog(null, "Bienvenido.\nIntroduce tu numero de cuenta, por favor:  "));
+        
+//        int numeroCuenta = Integer.parseInt(JOptionPane.showInputDialog(teclado.getInput()));// input de mi numero de cuenta
+        //screen.displayMessage("\nIngresa tu PIN: ");
+        int pin = Integer.parseInt(JOptionPane.showInputDialog(null, "\nIngresa tu PIN:  "));
+        
+        //teclado.getInput();// input de mi numero de cuenta
         validacionUsuario = datosBanco.usuarioAutenticar(numeroCuenta, pin);
         
         if (validacionUsuario){
@@ -98,13 +102,15 @@ public class ATM {
     }
     //despliega nuestro menu principal y regresa una seleccion tipo input
     private int displayMenuPrincipal(){
-        screen.displayMessageLine("\n Menu Principal");
-        screen.displayMessageLine("\n1- Ver mi cuenta");
-        screen.displayMessageLine("\n2- Retirar dinero");
-        screen.displayMessageLine("\n3- Deposito");
-        screen.displayMessageLine("\n4- Salir \n");
-        screen.displayMessageLine("\nIngrese una opcion: ");
-        return teclado.getInput();// regresa la seleccion escogida por el usuario
+        String menu = "Menu principal\n\n" +
+                      "    1.- Ver mi cuenta\n" +
+                      "    2.- Realizar un retiro.\n" +
+                      "    3.- Deposito\n" +
+                      "    4.- Salir.\n";
+        
+        int numero = Integer.parseInt(JOptionPane.showInputDialog(null, menu + "Ingrese una opcion: "));
+        return numero;
+//        return teclado.getInput();// regresa la seleccion escogida por el usuario
             
         }
     
